@@ -8,6 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import { FC } from "react";
+import { Link } from "react-router-dom";
 
 import "./Home.css";
 
@@ -23,7 +24,7 @@ export const Home: FC = () => {
         />
       </Box>
       <Grid container>
-        <Grid item sm={6} md={6}>
+        <Grid item sm={6} md={4}>
           <Card className={"card"}>
             <img
               src="/asset/categories-logo.png"
@@ -42,13 +43,18 @@ export const Home: FC = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button href="/categories" variant="contained">
+              <Button
+                component={Link}
+                to="/categories"
+                variant="contained"
+                className={"card-button"}
+              >
                 <Typography>Go to</Typography>
               </Button>
             </CardActions>
           </Card>
         </Grid>
-        <Grid item sm={6} md={6}>
+        <Grid item sm={6} md={4}>
           <Card className={"card"}>
             <img
               src="/asset/receipt-logo.png"
@@ -67,7 +73,42 @@ export const Home: FC = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button href="/upload-receipt" variant="contained">
+              <Button
+                component={Link}
+                to="/upload-receipt"
+                variant="contained"
+                className={"card-button"}
+              >
+                <Typography>Go to</Typography>
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Card className={"card"}>
+            <img
+              src="/asset/statistics-logo.webp"
+              alt="Statistics"
+              className={"card-image"}
+            />
+            <CardContent>
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="div"
+                textAlign={"center"}
+                className={"section-title"}
+              >
+                Statistics
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button
+                component={Link}
+                to="/statistics"
+                variant="contained"
+                className={"card-button"}
+              >
                 <Typography>Go to</Typography>
               </Button>
             </CardActions>

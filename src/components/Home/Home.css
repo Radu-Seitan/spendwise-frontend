@@ -37,3 +37,7 @@
 .card-image {
   width: 15rem;
 }
+
+.card-button {
+  color: #fff !important;
+}
