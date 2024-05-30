@@ -11,7 +11,7 @@ const App: FC = () => {
         main: "#d1cd00",
       },
       secondary: {
-        main: "#b5b45c",
+        main: "#ffffff",
       },
     },
   });

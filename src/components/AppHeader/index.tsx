@@ -20,6 +20,14 @@ export const AppHeader: FC = () => {
               Upload receipt
             </Typography>
           </Button>
+          <Button
+            color="primary"
+            variant="contained"
+            component={Link}
+            to="/products"
+          >
+            <Typography className={"menu-button-text"}>Products</Typography>
+          </Button>
           <Button variant="contained" component={Link} to="/statistics">
             <Typography className={"menu-button-text"}>Statistics</Typography>
           </Button>

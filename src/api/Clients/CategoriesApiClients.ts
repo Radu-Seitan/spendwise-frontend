@@ -23,6 +23,13 @@ export const CategoriesApiClient = {
     ).then((response) => response.data);
   },
 
+  updateOneAsync(model: CategoryModel): Promise<CategoryModel> {
+    return SpendWiseClient.put<CategoryModel>(
+      this.urlPath + "/" + model.id,
+      model
+    ).then((response) => response.data);
+  },
+
   deleteOneAsync(id: number): Promise<any> {
     return SpendWiseClient.delete(this.urlPath + "/" + id).then(
       (response) => response.data
